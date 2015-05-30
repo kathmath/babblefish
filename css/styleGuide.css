@@ -12,7 +12,7 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   border: 0;
-  font-size: 100%;
+  font-size: 16px;
   font: inherit;
   vertical-align: baseline;
   -webkit-margin-before: 0;
@@ -30,7 +30,6 @@ time, mark, audio, video {
 body {
   font-family: 'Lato', sans-serif;
   line-height: 1.4;
-  font-size: 1em;
   position: relative;
   cursor: default;
   text-decoration: none;
@@ -235,20 +234,26 @@ a:hover {
   text-align: left;
 }
 
+.right {
+  text-align: right;
+}
+
 .fishies {
   transform: translateX(-12em);
 }
 
 .bigFish {
   -webkit-animation-name: floating;
+  -webkit-animation-delay: 2s;
   -webkit-animation-duration: 6s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
   -moz-animation-name: floating;
+  -moz-animation-delay: 2s;
   -moz-animation-duration: 6s;
   -moz-animation-iteration-count: infinite;
   -moz-animation-timing-function: ease-in-out;
-  
+  margin-top: -6em;
 }
 
 @-webkit-keyframes floating{
@@ -261,6 +266,72 @@ a:hover {
     from {-moz-transform:translate3d(0px, 0px, 0px);}
     65% {-moz-transform:translate3d(8px, 15px, 0px);}
     to {-moz-transform: translate3d(-0px, -0px, 0px);}    
+}
+
+.swim {
+  -webkit-animation-name: swim; 
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+  }
+
+@-webkit-keyframes swim {
+    from {-webkit-transform:translate3d(-400px, 0px, 0px);}
+    to {-webkit-transform: translate3d(0px, 0px, 0px);}   
+}
+
+
+.bubbleContainer {
+  transform: translateY(8em);
+}
+
+.bubble {
+  width: 14px;
+  height: 14px;
+  margin-left: 250px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.25);
+  border-radius: 30px;
+  transform: translateY(8em);
+  -webkit-animation-name: bubbles;
+  animation-name: bubbles;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+}
+
+.divide {
+  height:15px;
+  background-color: rgba(26, 35, 126, 0.3);
+}
+
+
+@keyframes bubbles {
+  from {
+    right: 300px;
+    bottom: 0px;
+    opacity: 0.9;
+  }
+
+  50% {
+    right: 270px;
+    bottom: 100px;
+    opacity: 0.5;
+  }
+
+
+  to {
+    right: 300px;
+    bottom: 200px;
+    opacity: 0.3;
+
+  }
+}
+
+a.button:hover {
+  color: white;
+  background-color: blue;
 }
 
 /* who needs it*/
@@ -298,7 +369,7 @@ a:hover {
   width: 16em;
   height: 16em;
   margin: 0 auto;
-  background: #536DFE;
+  background-color: #fff;
   border: solid 6px #141B61;
   box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
   margin-right: 4em;
@@ -378,17 +449,12 @@ footer {
 }
 
 .bigFish {
-  margin-top: 0em;
+  margin-top: -8em;
 }
 
 .fishies {
   margin-top: -6em;
-}
-
-.flip {
-  -webkit-flex-direction: column-reverse;
-  -ms-flex-direction: column-reverse;
-  flex-direction: column-reverse;
+  margin-left: 10em;
 }
   
 }
