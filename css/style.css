@@ -1,31 +1,3 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  -webkit-margin-before: 0;
-  -webkit-margin-after: 0;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  margin:0;
-  padding: 0;
-  font-weight: normal;
-}
-
-
-/* start main css */
 
 body {
   font-family: 'Lato', sans-serif;
@@ -214,21 +186,17 @@ a:hover {
 .white {
   background-color: #FFF8E7;
   border-top: solid 10px rgba(0,0,0,0.2);
+  color: #1A237E;
 }
 
-.white p, h2, h3, h5 {
+.white h2 {
   color: #1A237E;
 }
 
 .blue {
   background-color: #536DFE;
-  color: #fff;
-  border-top: solid 10px rgba(0,0,0,0.2);
-}
-
-.blue h3, h2 {
-  color: #fff;
   text-shadow:none;
+  border-top: solid 10px rgba(0,0,0,0.2);
 }
 
 .left {
@@ -301,7 +269,6 @@ a:hover {
   background: #536DFE;
   border: solid 6px #141B61;
   box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
-  margin-right: 4em;
 }
 
 /*happy customers*/
@@ -332,6 +299,13 @@ a:hover {
   text-align: center;
 }
 
+#get a {
+    color: blue;
+  }
+
+#get a:hover {
+    color: #FFD600;
+  }
 
 @media (max-width: 770px) {
 
@@ -346,11 +320,6 @@ h2 {
 
 h4 {
   font-size: 1.2em;
-}
-
-footer {
-  margin: 0 2em;
-
 }
   
 .nav {
@@ -369,6 +338,10 @@ footer {
   margin-top: 2em;
 }
 
+.navItem {
+  margin: 0em 1em;
+}
+
 .row {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -377,12 +350,16 @@ footer {
   justify-content: center;
 }
 
+.rowItem {
+  margin: 2em auto;  
+}
+
 .bigFish {
   margin-top: 0em;
 }
 
 .fishies {
-  margin-top: -6em;
+  margin-top: -10em;
 }
 
 .flip {
